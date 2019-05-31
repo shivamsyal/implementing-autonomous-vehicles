@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <title>Our Town</title>
+        <style type="text/css">
+
+          h2, h3, h4, h5, h6
+          {
+            font-weight: normal;
+          }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .town{
+              text-align: center;
+              font-family: 'Josefin Sans', sans-serif;
+              padding: 20px;
+              line-height: 1.8;
+              z-index: 1;
+              opacity: 0.6;
+              transform: translateY(50px);
+              background: ghostwhite;
+              transition: all 0.8s ease-out;
+
+            }
+            
+
+            .town p{
+              padding: 70px;
+              font-size: 20px;
+            }
+            .town h4{
+
+              font-size: 20px;
+            }
+
+
+
+            .back-video {
+              height: 800px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+              position: fixed;
+              bottom: 0;
+              z-index: -1;
+
+            }
+            .video-cont{
+              position: absolute;
+              width: 100%;
+            }
+
+            .color-overlay{
+              position: absolute;
+              background-color: #ddd;
+              width: 100%;
+              height: 100vh;
+              opacity: 0;
+            }
+            .back-color{
+              position: absolute;
+              background-color: #ddd;
+              opacity: 0.6;
+              size: 100%;
+            }
+            #navbar {
+                    z-index: 999;
+                    overflow: hidden;
+                    background-color: #555;
+                    font-family: 'Josefin Sans', sans-serif;
+                }
+
+                /* Within the header div css, we have included divs for each of the links */
+                #navbar a {
+                    float: left;
+                    display: block;
+                    color: #fff;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 17px;
+                    font-family: 'Josefin Sans', sans-serif;
+                }
+
+                /* When the user hovers over one of the link divs, its colors change accordingly to below */
+                #navbar a:hover {
+                    background-color: #ddd;
+                    color: black;
+                    font-family: 'Josefin Sans', sans-serif;
+                }
+
+                /* When the user actively clicks on a link div, or the user is on the link div's webpage, it turns these colors */
+                #navbar a.active {
+                    background-color: #000;
+                    color: white;
+                    font-family: 'Josefin Sans', sans-serif;
+                }
+
+                /* This is the css that ensures that the header bar is always at the top of the webpage */
+                .sticky {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    font-family: 'Josefin Sans', sans-serif;
+                }
+                </style>
+                <body>
+                  <div id = "navbar">
+                        <a href="Home_Page.html">Home</a>
+                        <a class="active" href="Our_Town.html">Our Town</a>
+                        <a href="Benefits_And_Drawbacks.html">Benefits and Drawbacks</a>
+                        <a href="Rationale.html">Rationale</a>
+                        <a href="Driver_Surveys.html">Driver Surveys</a>
+                        <a href="Login.html">Contact Us</a>
+                    </div>
+
+                    <div class="video-cont">
+                      <div class="color-overlay"></div>
+                      <div class = "back-video">
+                        <video autoplay loop muted>
+                          <source src = "hero.mp4", type = "video/mp4">
+                        </video>
+                      </div>
+                    </div>
+                    <div class="town hidden">
+                      <div class="back-color">
+
+                      </div>
+                      <h1>Our Town</h1>
+                      <br>
+                      <hr>
+                      <br>
+                      <h4>Edison, NJ</h4>
+                      <p>This 32-square-mile township of more than 100,000 residents is the home of Thomas Alva Edison’s famed Menlo Park laboratory where the incandescent light bulb was perfected and sound was first recorded. Our high achieving public schools, central location, vibrant business environment and diverse community make Edison a great place to live, work and raise a family.</p>
+                    </div>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                    <script type="text/javascript">
+
+                        (function() {
+                          window.onload = function() {myFunction()};
+
+                          var navbar = document.getElementById("navbar");
+                          var sticky = navbar.offsetTop;
+
+                          function myFunction() {
+                            if (window.pageYOffset >= sticky) {
+                              navbar.classList.add("sticky")
+                            } else {
+                              navbar.classList.remove("sticky");
+                            }
+                          }
+
+
+                          </script>
+                </body>
