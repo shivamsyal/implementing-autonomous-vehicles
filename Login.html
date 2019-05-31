@@ -239,12 +239,12 @@ input {
 <div width = 100% height = 1000vh padding = 100px position = absolute margins = 20px text-align = center>
   <div class="login">
       <h1>Sign Up</h1>
-      <form method="post">
+      <form>
           <input type="text" name="u" placeholder="First Name" required="required" autocomplete="off" />
           <input type="text" name="p" placeholder="Last Name" required="required" autocomplete="off" />
           <input type="text" name="e" placeholder="Email" required="required" autocomplete="off" />
 
-          <button onclick = myfunctionYabul() type="submit" class="btn btn-primary btn-block btn-large" id="signup">Sign Up Now!</button>
+          <button onclick = myfunctionYabul() class="btn btn-primary btn-block btn-large" id="signup">Sign Up Now!</button>
 
       </form>
   </div>
@@ -294,6 +294,12 @@ input {
           navbar.classList.remove("sticky");
         }
       }
+    </script>
+  
+  <script>
+        function myfunctionYabul() {
+            alert("Thank you for signing up for our weekly autonomous driving newsletter! Each week, you'll recieve content regarding technology, our Artificial Intelligence progress here at our company, and technology news. Thanks!");
+        }
     </script>
 
     
